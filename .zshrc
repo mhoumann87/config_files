@@ -117,3 +117,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export DENO_INSTALL="/home/michael/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# remove ls highlight color
+_ls_colors=":ow=01;33"
+zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
+LS_COLORS+=$_ls_colorsq
